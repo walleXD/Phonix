@@ -6,10 +6,21 @@
   "devDependencies": {
     "devtron": "^1.4.0",
     "electron": "^1.7.5",
-    "electron-webpack": "^1.0.1"
+    "electron-builder": "^19.24.1",
+    "electron-webpack": "^1.0.1",
+    "rimraf": "^2.6.1"
+  },
+  "build": {
+    "asar": true
   },
   "scripts": {
-    "dev": "electron-webpack dev"
+    "dev": "electron-webpack dev",
+    "compile:nuxt": "nuxt build && nuxt generate",
+    "compile:main": "electron-webpack main",
+    "compile": "yarn compile:main && yarn compile:nuxt",
+    "build:clean": "rimraf dist/",
+    "build:app": "yarn compile && build",
+    "build": "yarn build:clean && yarn build:app"
   },
   "dependencies": {
     "nuxt": "^1.0.0-rc6",
