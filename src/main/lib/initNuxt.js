@@ -11,6 +11,7 @@ const defaultConfig = {
     }
   }
 }
+
 export let url = null
 
 export default (config = defaultConfig, port = 8080) => {

@@ -7,13 +7,18 @@ module.exports = {
   router: {
     mode: 'hash'
   },
+  plugins: [
+    { src: '~/plugins/electron', ssr: false },
+    { src: '~/plugins/router' },
+    { src: '~/plugins/vuetify' }
+  ],
   build: {
     extend (config, { isClient }) {
       // Extend only webpack config for client-bundle
       if (isClient) {
         config.target = 'electron-renderer'
       }
-      config.output.publicPath='_nuxt/'
+      config.output.publicPath = '_nuxt/'
     }
   }
 }
