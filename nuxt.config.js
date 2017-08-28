@@ -2,8 +2,10 @@ module.exports = {
   srcDir: './src/client',
   buildDir: './dist/client',
   generate: {
-    dir: './dist/renderer',
-    routes: ['/']
+    dir: './dist/renderer'
+  },
+  router: {
+    mode: 'hash'
   },
   build: {
     extend (config, { isClient }) {
@@ -11,6 +13,7 @@ module.exports = {
       if (isClient) {
         config.target = 'electron-renderer'
       }
+      config.output.publicPath='_nuxt/'
     }
   }
 }

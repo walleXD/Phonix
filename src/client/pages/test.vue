@@ -1,12 +1,12 @@
 <template lang="pug">
-  .landing-page
-    h1 Landing
-    nuxt-link(to='/test') Test
+  .test-page
+    h1 Test
+    nuxt-link(to='/') Home
 </template>
 
 <script>
 export default {
-  name: "LandingPage",
+  name: "TestPage",
   data: () => ({
 
   })
@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  .landing-page
+  .test-page
     h1
-      color blue
+      color red
 </style>

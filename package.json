@@ -8,10 +8,14 @@
     "electron": "^1.7.5",
     "electron-builder": "^19.24.1",
     "electron-webpack": "^1.0.1",
-    "rimraf": "^2.6.1"
+    "pug": "^2.0.0-rc.3",
+    "pug-loader": "^2.3.0",
+    "rimraf": "^2.6.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1"
   },
   "build": {
-    "asar": true
+    "asar": false
   },
   "scripts": {
     "dev": "electron-webpack dev",
